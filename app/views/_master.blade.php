@@ -13,7 +13,7 @@
 </head>
 <body>
 
-<img src='images/Users.png' alt='Foobooks logo'>
+<img src='images/foobooks-picture.png' alt='Foobooks logo'>
 
 @yield('content')
 
