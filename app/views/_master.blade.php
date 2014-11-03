@@ -6,7 +6,7 @@
     <meta charset='utf-8'>
 
 <link href="//netdna.bootstrapcdn.com/bootswatch/3.1.1/flatly/bootstrap.min.css" rel="stylesheet">
-    <link rel='stylesheet' href='foobooks.css' type='text/css'>
+    <link rel='stylesheet' href='css/foobooks.css' type='text/css'>
 
     @yield('head')
 
@@ -14,7 +14,16 @@
 </head>
 <body>
 
-<img src='images/foobooks-picture.PNG' alt='Foobooks logo'>
+<a href='/'><img class='logo' src='images/foobooks-picture.PNG' alt='Foobooks logo'></a>
+
+<a href='https://github.com/susanBuck/foobooks'>View on Github</a>
+
+	<nav>
+		<ul>
+			<li><a href='/list'>List All</a></li>
+			<li><a href='/add'>+ Add Book</a></li>
+		</ul>
+	</nav>
 
 @yield('content')
 
