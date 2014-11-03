@@ -10,7 +10,7 @@ Route::get('/', function() {
 });
 
 // List all books / search
-Route::get('/list/{query?}', function($query) {
+Route::get('/list/{format?}', function($format = 'html') {
 
     return View::make('list');
 
@@ -19,6 +19,7 @@ Route::get('/list/{query?}', function($query) {
 // Display the form for a new book
 Route::get('/add', function() {
 
+    return View::make('add');
 
 });
 
