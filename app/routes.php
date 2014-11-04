@@ -12,14 +12,35 @@ Route::get('/', function() {
 // List all books / search
 Route::get('/list/{format?}', function($format = 'html') {
 
-    return View::make('list');
+    $library = new Library();
 
+    $library->setPath(app_path().'/database/books.json');
+
+    $books = $library->getBooks();
+
+    if($format == 'json') {
+        return 'JSON Version';
+    }
+    elseif($format == 'pdf') {
+        return 'PDF Version;';
+    }
+    else {
+        return View::make('list')
+            ->with('name','Susan')
+            ->with('books', $books);
+
+    }
 });
 
 // Display the form for a new book
 Route::get('/add', function() {
 
-    return View::make('add');
+    $library = new Library();
+    $library->setPath(app_path().'/database/books.json');
+
+    $books = $library->getBooks();
+
+    echo Pre::render($books);
 
 });
 
