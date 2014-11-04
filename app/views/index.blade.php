@@ -9,5 +9,14 @@ Welcome to Foobooks
 @stop
 
 @section('content')
-Search: <input type='text'>
+
+	{{ Form::open(array('url' => '/list', 'method' => 'GET')) }}
+
+		{{ Form::label('query','Search') }}
+
+		{{ Form::text('query'); }}
+
+		{{ Form::submit('Search'); }}
+
+	{{ Form::close() }}
 @stop

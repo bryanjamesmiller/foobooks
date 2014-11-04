@@ -12,6 +12,8 @@ List all the books
 		<a href='/list/pdf' target='_blank'>PDF</a>
 	</div>
 
+	<h2>You searched for {{{ $query }}}</h2>
+
 	@foreach($books as $title => $book)
 		<section class='book'>
 			<h2>{{ $title }}</h2>
